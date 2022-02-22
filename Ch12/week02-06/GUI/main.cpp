@@ -39,6 +39,7 @@ int main()
 
 	Axis x {Axis::x, Point{20, y_orig}, xlength, xlength/xscale, "x"};
 	Axis y {Axis::y, Point{x_orig, ylength + 20}, ylength, ylength/yscale, "y"};
+	x.set_color(Color::green);
 
 	Rectangle r {Point{200,200}, 100, 50};
 
@@ -52,10 +53,28 @@ int main()
 	Image ii {Point{100,100}, "badge.jpg"};
 
 	Circle c {Point{700,700}, 100};
+	c.set_fill_color(Color::cyan);
 
 	Ellipse e {Point{500,500}, 100, 50};
 	e.set_fill_color(Color::red);
 
+	Polygon poly;
+	poly.add(Point(300,200));
+	poly.add(Point(350,100));
+	poly.add(Point(400,200));
+	poly.set_color(Color::red);
+	poly.move(600,0);
+
+	Closed_polyline poly_rect;
+	poly_rect.add(Point(100,50));
+	poly_rect.add(Point(200,50));
+	poly_rect.add(Point(200,100));
+	poly_rect.add(Point(100,100));
+	poly_rect.add(Point(50,75));
+	poly_rect.move(0,-20);
+
+	win.attach(poly_rect);
+	win.attach(poly);
 	win.attach(e);
 	win.attach(ii);
 	win.attach(c);
