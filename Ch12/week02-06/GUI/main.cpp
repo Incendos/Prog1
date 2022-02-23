@@ -71,7 +71,10 @@ int main()
 	poly_rect.add(Point(200,100));
 	poly_rect.add(Point(100,100));
 	poly_rect.add(Point(50,75));
+	poly_rect.set_fill_color(Color::red);
 	poly_rect.move(0,-20);
+
+	Mark m {Point{100,200},'x'};
 
 	win.attach(poly_rect);
 	win.attach(poly);
@@ -85,6 +88,7 @@ int main()
 	win.attach(cos_func);
 	win.attach(x);
 	win.attach(y);
+	win.attach(m);
 
     win.wait_for_button();
 
