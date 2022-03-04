@@ -6,12 +6,6 @@
 #include "Simple_window.h"
 #include "Graph.h"
 
-
-
-double one(double) { return 1; }
-
-double square(double x) { return x*x; }
-
 int main()
 {
     using namespace Graph_lib;
@@ -45,11 +39,11 @@ int main()
 		win.attach(kepek[i]);
 	}
 
-	Image football {Point(700,0), "ball.jpg"};
+	Image football {Point(700,100), "ball.jpg"};
 	win.attach(football);
     win.wait_for_button();
 
-	for(int i = 0; i < 7; i++)
+	for(int i = 0; i < 6; i++)
 	{
 		football.move(0,100);
 		win.wait_for_button();
