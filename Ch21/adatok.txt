@@ -1,0 +1,10 @@
+Pizza 53 1113.6
+Gyros 16 1556.7
+Sör 91 211.78
+Kenyér 32 199.22
+Tejföl 43 122.9
+Chips 23 235.45
+Cukor 66 876.21
+kifli 84 75.33
+Tojás 79 53.11
+Yoghurt 21 123.4
